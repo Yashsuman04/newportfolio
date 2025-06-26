@@ -1,0 +1,158 @@
+.about {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #181921;
+}
+
+.about-parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.about-shadow-title {
+  position: fixed;
+  top: 0;
+  left: 40px;
+  width: 100vw;
+  height: 100vh;
+  text-align: left;
+  font-family: 'Poppins', 'Muli', sans-serif;
+  writing-mode: vertical-lr;
+  font-size: 19vw;
+  line-height: 1;
+  color: rgba(0,216,255,0.18);
+  background: linear-gradient(90deg, rgba(0,216,255,0.2), rgba(0,216,255,0.35));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 1;
+  letter-spacing: 2vw;
+  text-shadow: 0 0 16px #00d8ff33;
+}
+
+.about-content-center {
+  position: relative;
+  z-index: 3;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #00d8ff;
+  box-shadow: 0 0 24px #00d8ff80, 0 4px 24px #23252640;
+  object-fit: cover;
+  background: #fff;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 0.3rem;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.accent {
+  color: #00d8ff;
+  font-weight: 900;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00bcd4;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.about-description {
+  font-size: 1.18rem;
+  color: #c4c3ca;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.about-skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.about-skills li {
+  font-size: 1.08rem;
+  color: #00bcd4;
+  font-weight: 700;
+  background: rgba(224, 247, 250, 0.15);
+  border-radius: 10px;
+  padding: 10px 32px;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 8px rgba(0,216,255,0.07);
+}
+
+@media (max-width: 900px) {
+  .about-shadow-title {
+    font-size: 12vw;
+    left: 10px;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-shadow-title {
+    font-size: 2.5rem;
+    left: 0;
+    top: unset;
+    bottom: 10px;
+    width: 100vw;
+    height: auto;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    opacity: 0.5;
+    letter-spacing: 0.5rem;
+    background: none;
+    color: #00d8ff33;
+    -webkit-text-fill-color: initial;
+    text-shadow: 0 0 8px #00d8ff33;
+  }
+  .about-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+} 

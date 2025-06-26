@@ -1,0 +1,141 @@
+.projects {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #181921;
+}
+
+.projects-parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  z-index: 0 !important;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.projects-shadow-title {
+  position: fixed;
+  top: 0;
+  left: 20px;
+  width: 100%;
+  height: 300%;
+  text-align: left;
+  font-family: 'Poppins', 'Muli', sans-serif;
+  writing-mode: vertical-lr;
+  font-size: 15vw;
+  line-height: 1;
+  color: rgba(0,216,255,.08);
+  background: linear-gradient(90deg, rgba(0,216,255,0), rgba(0,216,255,0.25));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.projects-content {
+  position: relative;
+  z-index: 3;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color:white;
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 16px #00d8ff33;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.13);
+  border-radius: 18px;
+  box-shadow: 0 2px 18px rgba(0,216,255,0.08);
+  padding: 0 0 24px 0;
+  min-width: 320px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 2px solid #00d8ff22;
+  backdrop-filter: blur(6px);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 32px #00d8ff44;
+  border: 2px solid #00d8ff;
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+
+.project-info {
+  padding: 24px 18px 0 18px;
+  width: 100%;
+}
+
+.project-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #00d8ff;
+  font-weight: 700;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .projects-shadow-title {
+    font-size: 8vw;
+    left: 5px;
+  }
+  .projects-title {
+    font-size: 2rem;
+  }
+  .projects-grid {
+    gap: 16px;
+  }
+  .project-card {
+    min-width: 180px;
+    max-width: 220px;
+    padding: 0 0 12px 0;
+  }
+  .project-card img {
+    height: 100px;
+  }
+} 
